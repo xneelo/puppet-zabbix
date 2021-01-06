@@ -355,7 +355,6 @@ describe 'zabbix::proxy' do
           it { is_expected.to contain_file('/etc/zabbix/zabbix_proxy.conf').with_content %r{^TLSPSKFile=/etc/zabbix/keys/file.key$} }
           it { is_expected.to contain_file('/etc/zabbix/zabbix_proxy.conf').with_content %r{^SSLCertLocation=/usr/lib/zabbix/ssl/certs} }
           it { is_expected.to contain_file('/etc/zabbix/zabbix_proxy.conf').with_content %r{^SSLKeyLocation=/usr/lib/zabbix/ssl/keys} }
-
         end
 
         context 'with zabbix_proxy.conf and version 3.4' do
