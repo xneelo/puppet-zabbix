@@ -107,6 +107,9 @@
 # [*starttimers*]
 #   Number of pre-forked instances of timers.
 #
+# [*startescalators*]
+#   Number of pre-forked instances of escalators.
+#
 # [*javagateway*]
 #   IP address (or hostname) of zabbix java gateway.
 #
@@ -335,6 +338,7 @@ class zabbix::server (
   $startdiscoverers                          = $zabbix::params::server_startdiscoverers,
   $starthttppollers                          = $zabbix::params::server_starthttppollers,
   $starttimers                               = $zabbix::params::server_starttimers,
+  $startescalators                           = $zabbix::params::server_startescalators,
   $javagateway                               = $zabbix::params::server_javagateway,
   $javagatewayport                           = $zabbix::params::server_javagatewayport,
   $startjavapollers                          = $zabbix::params::server_startjavapollers,
