@@ -220,6 +220,7 @@ describe 'zabbix::server' do
             historytextcachesize: '4M',
             housekeepingfrequency: '1',
             include_dir: '/etc/zabbix/zabbix_server.conf.d',
+            startescalators: 1000,
             javagateway: '192.168.2.2',
             javagatewayport: '10052',
             listenip: '192.168.1.1',
@@ -285,6 +286,7 @@ describe 'zabbix::server' do
         it { is_expected.to contain_file('/etc/zabbix/zabbix_server.conf').with_content %r{^HistoryTextCacheSize=4M} }
         it { is_expected.to contain_file('/etc/zabbix/zabbix_server.conf').with_content %r{^HousekeepingFrequency=1} }
         it { is_expected.to contain_file('/etc/zabbix/zabbix_server.conf').with_content %r{^Include=/etc/zabbix/zabbix_server.conf.d} }
+        it { is_expected.to contain_file('/etc/zabbix/zabbix_server.conf').with_content %r{^StartEscalators=1000} }
         it { is_expected.to contain_file('/etc/zabbix/zabbix_server.conf').with_content %r{^JavaGateway=192.168.2.2} }
         it { is_expected.to contain_file('/etc/zabbix/zabbix_server.conf').with_content %r{^JavaGatewayPort=10052} }
         it { is_expected.to contain_file('/etc/zabbix/zabbix_server.conf').with_content %r{^ListenIP=192.168.1.1} }
