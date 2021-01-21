@@ -200,6 +200,7 @@ class zabbix::params {
   $server_sshkeylocation                    = undef
   $server_sslcertlocation                   = '/usr/lib/zabbix/ssl/certs'
   $server_sslkeylocation                    = '/usr/lib/zabbix/ssl/keys'
+  $server_startescalators                   = '1'
   $server_startdbsyncers                    = '4'
   $server_startdiscoverers                  = '1'
   $server_starthttppollers                  = '1'
