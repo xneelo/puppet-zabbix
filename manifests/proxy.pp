@@ -437,7 +437,7 @@ class zabbix::proxy (
   $loadmodule                                = $zabbix::params::proxy_loadmodule,
   Boolean $manage_selinux                    = $zabbix::params::manage_selinux,
   Optional[Stdlib::Absolutepath] $socketdir  = $zabbix::params::proxy_socketdir,
-  ) inherits zabbix::params {
+) inherits zabbix::params {
   # check osfamily, Arch is currently not supported for web
   if $facts['os']['family'] == 'Archlinux' {
     fail('Archlinux is currently not supported for zabbix::proxy ')
